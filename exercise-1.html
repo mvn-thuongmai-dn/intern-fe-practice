@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlankHat Blog</title>
+  </head>
+  <body>
+    <header>
+      <h2>Logo</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+        <!-- Form to search blog -->
+        <form>
+          <input type="search" name="q" placeholder="Search query" />
+          <input type="submit" value="Go!" />
+        </form>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Section for timeline and tag of blog -->
+      <section>
+        <h3>Popular Tags</h3>
+        <ul>
+          <li><a href="#">#html</a></li>
+          <li><a href="#">#css</a></li>
+          <li><a href="#">#php</a></li>
+          <li><a href="#">#searchengine</a></li>
+          <li><a href="#">#reactjs</a></li>
+          <li><a href="#">#typescript</a></li>
+          <li><a href="#">#git</a></li>
+          <li><a href="#">#redux</a></li>
+          <li><a href="#">#oop</a></li>
+          <li><a href="#">#functional</a></li>
+        </ul>
+
+        <hr />
+
+        <h3>Timeline Blog</h3>
+        <ul>
+          <li><a href="#">August 2021</a></li>
+          <li><a href="#">July 2021</a></li>
+          <li><a href="#">June 2021</a></li>
+          <li><a href="#">May 2021</a></li>
+          <li><a href="#">April 2021</a></li>
+          <li><a href="#">March 2021</a></li>
+          <li><a href="#">February 2021</a></li>
+          <li><a href="#">January 2021</a></li>
+          <li><a href="#">December 2020</a></li>
+          <li><a href="#">November 2020</a></li>
+          <li><a href="#">October 2020</a></li>
+        </ul>
+      </section>
+      <!-- Start Article -->
+      <article>
+        <section>
+          <h2>
+            Git and GitHub in a Nutshell: Definitive tutorial for beginners
+          </h2>
+          <span>Aug 28, 2020</span>
+        </section>
+        <section>
+          <h3>What is Git?</h3>
+          <p>
+            Git is a distributed version control system designed to track
+            changes in a project’s files. Git was released in 2005 by Linus
+            Torvalds for the Linux kernel. Other kernel developers contributed
+            to its development, and it has become the most popular choice for
+            software teams. Git offers strong support for non-linear development
+            and speed.
+          </p>
+          <img src="#" alt="git-logo" />
+        </section>
+        <section>
+          <h3>Git terminology</h3>
+          <img src="#" alt="git-feature" />
+        </section>
+        <section>
+          <h3>What are Git states?</h3>
+          <p>
+            Git has three primary states that it allows the project’s files to
+            acquire. The three states are outlined below.
+          </p>
+          <ul>
+            <li>
+              <strong>Modified: </strong>files that have been changed, but the
+              changes have not yet been marked by Git. These changes won’t
+              become part of the next snapshot.
+            </li>
+            <li>
+              <strong>Staged: </strong>the changes have been tracked by Git and
+              will be marked as such in the next snapshot.
+            </li>
+            <li>
+              <strong>Committed: </strong>the changed files that have
+              successfully become part of the latest snapshot.
+            </li>
+          </ul>
+          <p>
+            A repository is a directory or folder where your project lives, and
+            it can either be local (on your computer) or hosted online. It
+            contains the entire codebase and its revision history. Popular
+            online hosting services for repositories are GitHub, GitLab, and
+            Bitbucket. We will learn more about GitHub later.
+          </p>
+        </section>
+        <section>
+          <h3>Git things to learn for beginners</h3>
+          <ol>
+            <li>Get a git repo</li>
+            <li>Recording changes to repo</li>
+            <li>Viewing the commit history</li>
+            <li>Undoing things</li>
+            <li>Working with remotes</li>
+            <li>Git branching</li>
+            <li>Tagging</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Usually use command</h3>
+          <!-- Start git table -->
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Git task</th>
+                <th>Notes</th>
+                <th>Git commands</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Tell Git who you are</strong>
+                </td>
+                <td>
+                  Configure the author name and email address to be used with
+                  your commits.
+                  <p>
+                    Note that Git strips some characters (for example trailing
+                    periods) from <code>user.name</code>.
+                  </p>
+                </td>
+                <td>
+                  <code>git config --global user.name "Sam Smith"</code>
+                  <p>
+                    <code
+                      >git config&nbsp;--global&nbsp;user.email
+                      sam@example.com</code
+                    >
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Create a new local repository</strong>
+                </td>
+                <td>&nbsp;</td>
+                <td><code>git init</code></td>
+              </tr>
+              <tr>
+                <td rowspan="2">
+                  <strong>Check out a repository</strong>
+                </td>
+                <td>Create a working copy of a local repository:</td>
+                <td>
+                  <code>git clone /path/to/repository</code>
+                </td>
+              </tr>
+              <tr>
+                <td>For a remote server, use:</td>
+                <td>
+                  <code>git clone username@host:/path/to/repository</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Add files </strong>
+                </td>
+                <td>Add one or more files to staging (index):</td>
+                <td>
+                  <code>git add &lt;filename&gt;</code>
+                  <code>git add *</code>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="2">
+                  <strong>Commit</strong>
+                </td>
+                <td>
+                  Commit changes to head (but not yet to the remote repository):
+                </td>
+                <td>
+                  <code>git commit -m "Commit message"</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Commit any files you've added with <code>git add</code>, and
+                  also commit any files you've changed since then:
+                </td>
+                <td>
+                  <code>git commit -a</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Push </strong>
+                </td>
+                <td>
+                  Send changes to the master branch of your remote repository:
+                </td>
+                <td>
+                  <code>git push origin master</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Status</strong>
+                </td>
+                <td>
+                  List the files you've changed and those you still need to add
+                  or commit:
+                </td>
+                <td><code>git status</code></td>
+              </tr>
+              <tr>
+                <td rowspan="2">
+                  <strong>Connect to a remote repository</strong>
+                </td>
+                <td>
+                  If you haven't connected your local repository to a remote
+                  server, add the server to be able to push to it:
+                </td>
+                <td>
+                  <code>git remote add origin &lt;server&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>List all currently configured remote repositories:</td>
+                <td>
+                  <code>git remote -v</code>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="7">
+                  <strong>Branches </strong>
+                </td>
+                <td>Create a new branch and switch to it:</td>
+                <td>
+                  <code>git checkout -b &lt;branchname&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Switch from one branch to another:</td>
+                <td>
+                  <code>git checkout &lt;branchname&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  List all the branches in your repo, and also tell you what
+                  branch you're currently in:
+                </td>
+                <td><code>git branch</code></td>
+              </tr>
+              <tr>
+                <td>Delete the feature branch:</td>
+                <td>
+                  <code>git branch -d &lt;branchname&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Push the branch to your remote repository, so others can use
+                  it:
+                </td>
+                <td>
+                  <code>git push origin &lt;branchname&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Push all branches to your remote repository:</td>
+                <td>
+                  <code>git push --all origin</code>
+                </td>
+              </tr>
+              <tr>
+                <td>Delete a branch on your remote repository:</td>
+                <td>
+                  <code>git push origin :&lt;branchname&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="4">
+                  <strong>Update from the remote repository</strong>
+                </td>
+                <td>
+                  Fetch and merge changes on the remote server to your working
+                  directory:
+                </td>
+                <td><code>git pull</code></td>
+              </tr>
+              <tr>
+                <td>To merge a different branch into your active branch:</td>
+                <td>
+                  <code>git merge &lt;branchname&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  View all the merge conflicts:
+                  <p>View the conflicts against the base file:</p>
+                  <p>codeview changes, before merging:</p>
+                </td>
+                <td>
+                  <code>git diff</code>
+                  <p><code>git diff --base &lt;filename&gt;</code></p>
+                  <code
+                    >git diff &lt;sourcebranch&gt; &lt;targetbranch&gt;</code
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  After you have manually resolved any conflicts, you mark the
+                  changed file:
+                </td>
+                <td>
+                  <code>git add &lt;filename&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>Tags</strong></td>
+                <td>
+                  You can use tagging to mark a significant changeset, such as a
+                  release:
+                </td>
+                <td>
+                  <code>git tag 1.0.0 &lt;commitID&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  CommitId is the leading characters of the changeset ID, up to
+                  10, but must be unique. Get the ID using:
+                </td>
+                <td><code>git log</code></td>
+              </tr>
+              <tr>
+                <td>Push all tags to remote repository:</td>
+                <td>
+                  <code>git push --tags origin</code>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="2">
+                  <strong>Undo local changes</strong>
+                </td>
+                <td>
+                  If you mess up, you can replace the changes in your working
+                  tree with the last content in head:
+                  <p>
+                    Changes already added to the index, as well as new files,
+                    will be kept.
+                  </p>
+                </td>
+                <td>
+                  <code>git checkout -- &lt;filename&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Instead, to drop all your local changes and commits, fetch the
+                  latest history from the server and point your local master
+                  branch at it, do this:
+                </td>
+                <td>
+                  <code> git fetch origin git reset --hard origin/master</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span><strong>Search</strong> </span>
+                </td>
+                <td>Search the working directory for <code>foo()</code>:</td>
+                <td>
+                  <code>git grep "foo()"</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- End git table -->
+        </section>
+        <section>
+          <h3>Youtube: Git crash course for newbie</h3>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/SWYqp7iY_Tc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </section>
+      </article>
+      <!-- End Article -->
+
+      <!-- Sidebar -->
+      <aside>
+        <h3>Get my newest blog</h3>
+        <form action="POST">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+          <button type="submit">Send</button>
+        </form>
+        <hr />
+        <h3>Related Blog</h3>
+
+        <ul>
+          <li>
+            <img src="#" alt="blog-1" />
+            <div>
+              <a href="#">Title of Blog 1</a>
+              <span
+                >Created at <time datetime="2021-01-21">2021-01-21</time></span
+              >
+            </div>
+          </li>
+          <li>
+            <img src="#" alt="blog-2" />
+            <div>
+              <a href="#">Title of Blog 2</a>
+              <span
+                >Created at <time datetime="2021-02-21">2021-02-21</time></span
+              >
+            </div>
+          </li>
+        </ul>
+        <hr />
+
+        <h3>About Me</h3>
+        <p>Brief Description</p>
+        <a href="#about"><strong>More about me</strong></a>
+      </aside>
+      <!-- End Sidebar -->
+    </main>
+
+    <footer>
+      <p>&copy 2021 Blank Hat Site.</p>
+    </footer>
+  </body>
+</html>
