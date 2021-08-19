@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlankHat Blog</title>
+    <link rel="stylesheet" href="exercise-3.css" />
+  </head>
+  <body>
+    <header id="page-header">
+      <div class="container">
+        <h2 class="header-logo">Logo</h2>
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li class="menu-item has_sub_menu">
+              <a href="#">Home</a>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="#">Item1</a></li>
+                <li class="submenu-item"><a href="#">Item2</a></li>
+                <li class="submenu-item"><a href="#">Item3</a></li>
+                <li class="submenu-item"><a href="#">Item4</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="#">Blog</a></li>
+            <li class="menu-item"><a href="#">Category</a></li>
+            <li class="menu-item"><a href="#">Profile</a></li>
+          </ul>
+        </nav>
+        <div class="form-search">
+          <!-- Form to search blog -->
+          <form>
+            <input
+              class="form-search-input"
+              type="search"
+              name="q"
+              placeholder="Search query"
+            />
+            <button class="btn btn-search" type="submit">Go</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="page-main">
+      <!-- Section for timeline and tag of blog -->
+      <section class="section-timeline-tags">
+        <h3 class="section-title">Popular Tags</h3>
+        <ul class="timeline-tag-list">
+          <li class="timeline-tag-item"><a href="#">#html</a></li>
+          <li class="timeline-tag-item"><a href="#">#css</a></li>
+          <li class="timeline-tag-item"><a href="#">#php</a></li>
+          <li class="timeline-tag-item"><a href="#">#searchengine</a></li>
+          <li class="timeline-tag-item"><a href="#">#reactjs</a></li>
+          <li class="timeline-tag-item"><a href="#">#typescript</a></li>
+          <li class="timeline-tag-item"><a href="#">#git</a></li>
+          <li class="timeline-tag-item"><a href="#">#redux</a></li>
+          <li class="timeline-tag-item"><a href="#">#oop</a></li>
+          <li class="timeline-tag-item"><a href="#">#functional</a></li>
+        </ul>
+        <h3 class="section-title">Timeline Blog</h3>
+        <ul class="timeline-tag-list">
+          <li class="timeline-tag-item"><a href="#">August 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">July 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">June 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">May 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">April 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">March 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">February 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">January 2021</a></li>
+          <li class="timeline-tag-item"><a href="#">December 2020</a></li>
+          <li class="timeline-tag-item"><a href="#">November 2020</a></li>
+          <li class="timeline-tag-item"><a href="#">October 2020</a></li>
+        </ul>
+        <aside class="main-sidebar">
+          <h3>Get my newest blog</h3>
+          <form action="POST">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <button type="submit">Send</button>
+          </form>
+          <hr />
+          <h3>Related Blog</h3>
+
+          <ul>
+            <li>
+              <img src="#" alt="blog-1" />
+              <div>
+                <a href="#">Title of Blog 1</a>
+                <span
+                  >Created at
+                  <time datetime="2021-01-21">2021-01-21</time></span
+                >
+              </div>
+            </li>
+            <li>
+              <img src="#" alt="blog-2" />
+              <div>
+                <a href="#">Title of Blog 2</a>
+                <span
+                  >Created at
+                  <time datetime="2021-02-21">2021-02-21</time></span
+                >
+              </div>
+            </li>
+          </ul>
+          <hr />
+
+          <h3>About Me</h3>
+          <p>Brief Description</p>
+          <a href="#about"><strong>More about me</strong></a>
+        </aside>
+      </section>
+      <!-- Start Article -->
+      <article class="main-article">
+        <section class="article-content">
+          <h2 class="article-title">
+            Git and GitHub in a Nutshell: Definitive tutorial for beginners
+          </h2>
+          <time>Aug 28, 2020</time>
+        </section>
+        <section>
+          <h3 class="git-title">What is Git?</h3>
+          <p class="article-text">
+            Git is a distributed version control system designed to track
+            changes in a project’s files. Git was released in 2005 by Linus
+            Torvalds for the Linux kernel. Other kernel developers contributed
+            to its development, and it has become the most popular choice for
+            software teams. Git offers strong support for non-linear development
+            and speed.
+          </p>
+          <img src="#" alt="git-logo" />
+        </section>
+        <section>
+          <h3 class="git-title">Git terminology</h3>
+          <img src="#" alt="git-feature" />
+        </section>
+        <section>
+          <h3 class="git-title">What are Git states?</h3>
+          <p>
+            Git has three primary states that it allows the project’s files to
+            acquire. The three states are outlined below.
+          </p>
+          <ul>
+            <li>
+              <strong>Modified: </strong>files that have been changed, but the
+              changes have not yet been marked by Git. These changes won’t
+              become part of the next snapshot.
+            </li>
+            <li>
+              <strong>Staged: </strong>the changes have been tracked by Git and
+              will be marked as such in the next snapshot.
+            </li>
+            <li>
+              <strong>Committed: </strong>the changed files that have
+              successfully become part of the latest snapshot.
+            </li>
+          </ul>
+          <p>
+            A repository is a directory or folder where your project lives, and
+            it can either be local (on your computer) or hosted online. It
+            contains the entire codebase and its revision history. Popular
+            online hosting services for repositories are GitHub, GitLab, and
+            Bitbucket. We will learn more about GitHub later.
+          </p>
+        </section>
+        <section>
+          <h3 class="git-title">Git things to learn for beginners</h3>
+          <ol>
+            <li>Get a git repo</li>
+            <li>Recording changes to repo</li>
+            <li>Viewing the commit history</li>
+            <li>Undoing things</li>
+            <li>Working with remotes</li>
+            <li>Git branching</li>
+            <li>Tagging</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Youtube: Git crash course for newbie</h3>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/SWYqp7iY_Tc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </section>
+      </article>
+      <!-- End Article -->
+      <!-- Sidebar -->
+
+      <!-- End Sidebar -->
+    </main>
+
+    <footer>
+      <p>&copy 2021 Blank Hat Site.</p>
+    </footer>
+  </body>
+</html>
