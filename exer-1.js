@@ -57,7 +57,7 @@ function getDividedNumber(string, number) {
   var splittedArray = string.toString().split("");
   var asteriskIndex = splittedArray.indexOf("*");
   var result = [];
-  for (let index = 0; index < 10; index++) {
+  for (var index = 0; index < 10; index++) {
     splittedArray[asteriskIndex] = index;
     var numberParsed = parseInt(splittedArray.join(""));
     if (numberParsed % number === 0) {
