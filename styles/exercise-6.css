@@ -37,6 +37,10 @@ input,
 span {
   transition: all 0.3s ease 0s;
 }
+button.active {
+  background-color: #fa6bff;
+  /* color: #a749ff !important; */
+}
 .container-fluid {
   max-width: 1470px;
   margin: 0 auto;
@@ -508,10 +512,10 @@ span {
   padding: 3px 11px;
   border-radius: 3px;
 }
-.product-image .product-image-badges > span.pink {
+span.pink {
   color: #fa6bff;
 }
-.product-image .product-image-badges > span.purple {
+span.purple {
   color: #a749ff;
 }
 .product-image .product-image-badges > span:last-child {
@@ -559,13 +563,13 @@ span {
 .product-content .product-info .product-name a {
   font-size: 17px;
 }
-.product-content .current-price .old-price {
+.old-price {
   font-size: 15px;
   position: relative;
   margin-left: 17px;
   color: #fa6bff;
 }
-.product-content .current-price .old-price:before {
+.old-price:before {
   position: absolute;
   top: 7px;
   left: -13px;
