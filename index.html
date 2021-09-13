@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
+      rel="stylesheet"
+    /> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Todo App Management</title>
+  </head>
+
+  <body id="body">
+    <header class="page-header">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <div class="header-left">
+            <a class="navbar-brand">Todo Management</a>
+            <button id="sidebar-toggle" class="btn btn-outline-success">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <div class="header-right">
+            <input
+              class="form-control me-2 me-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </div>
+        </div>
+      </nav>
+      <div id="sidebar" class="sidebar-nav bg-light">
+        <ul class="nav-list list-group">
+          <li class="list-group-item">
+            <a href="/"><i class="fas fa-list-ul"></i>List todo</a>
+          </li>
+          <li class="list-group-item">
+            <a href="create.html"><i class="fas fa-plus"></i>Create todo</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="container-fluid px-4">
+        <h1 class="mt-4 mb-4">List Todo</h1>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Status</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </main>
+    <footer class="page-footer py-4 bg-light mt-auto">
+      <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small">
+          <div class="text-muted">Copyright &copy; Your Website 2021</div>
+          <div>
+            <a href="#">Privacy Policy</a>
+            &middot;
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
